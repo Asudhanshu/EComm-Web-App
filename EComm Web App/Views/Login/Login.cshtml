@@ -1,0 +1,140 @@
+﻿
+@*<!DOCTYPE html>
+<html lang="en">
+<body class="bg-image-login">
+<div class="text-center">
+<h1>Login</h1>
+<div class="row justify-content-center">
+    <div class="col-6 justify-content-center">
+        <div class="card">
+            <div class="card-header">
+
+            </div>
+            <div class="card-body text-center">
+                 <form asp-action="LoginUser">
+                    <div>
+                        <img width="150px" src="~/Images/login.jfif" />
+                    </div>
+                     <div asp-validation-summary="All" class="text-danger">
+
+                     </div>
+                     <div class="mb-3">
+                    <label class="form-label" asp-for="Username">Email Address</label>
+                    <input type="text" asp-for="Username" class="form-control" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Password">Password</label>
+                    <input type="password" asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                 <input type="checkbox" asp-for="RemeberMe" class="form-check-input" />
+                    <label class="form-check-label" asp-for="RemeberMe">Remember me?</label>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+                <div class="mb-3">
+                    <label class="form-check-label">New User? Register Here!</label></br></br>
+                    <button asp-action="Register" class="btn btn-info">Register</button>
+                </div>
+                </form>
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+        
+    </div>
+</div>
+</div>
+</body>
+</html>*@
+
+
+@model EComm_Web_App.Models.Login
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Spin Login Form Responsive Widget Template :: w3layouts</title>
+	<!-- Meta-Tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Spin Login Form a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta-Tags -->
+	<!-- Stylesheets -->
+	<link href="~/css1/font-awesome1.css" rel="stylesheet">
+	<link href="~/css1/style1.css" rel='stylesheet' type='text/css' />
+	<!--// Stylesheets -->
+	<!--fonts-->
+	<link href="~/fonts1/fonts/fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+	<!--//fonts-->
+</head>
+
+<body>
+	<h1>Login Form </h1>
+	<div class="clear-loading spinner">
+		<span></span>
+	</div>
+	<div class="w3ls-login box box--big">
+		<!-- form starts here -->
+		
+		<form asp-action="LoginUser" method="post">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+			<div class="agile-field-txt">
+				<label class="form-label" asp-for="Username"><i class="fa fa-user" aria-hidden="true"></i> Email Address </label>
+				<input type="text" asp-for="Username" class="form-control" placeholder="Enter Email Address" />
+				 <span asp-validation-for="Username" class="text-danger"></span>
+			</div>
+
+			<div class="agile-field-txt">
+				<label class="form-label" asp-for="Password"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Password </label>
+				<input type="password" asp-for="Password" class="form-control" placeholder="Enter Password"/>
+				 <span asp-validation-for="Password" class="text-danger" ></span>
+			</div>
+
+
+				<div class="agile_label">
+                 <input id="check3" type="checkbox" asp-for="RemeberMe" class="form-check-input"/>
+                    <label class="form-check-label" asp-for="RemeberMe">Me</label>
+                </div>
+
+			
+				</br></br><input type="submit" value="LOGIN">
+			  <div class="agile-field-txt">
+                    <label class="form-check-label">New User? Register Here!</label></br></br>
+                    @*<button asp-action="Register" class="btn btn-info">Register</button>*@
+					<input asp-action="Register" type="submit" value="Register">
+                </div>
+		</form>
+	</div>
+	<!-- //form ends here -->
+	<!--copyright-->
+	<@*div class="copy-wthree">
+		<p>© 2018 Spin Login Form . All Rights Reserved | Design by
+			<a href="http://w3layouts.com/" target="_blank">W3layouts</a>
+		</p>
+	</div>*@
+	<!--//copyright-->
+</body>
+</html>
+

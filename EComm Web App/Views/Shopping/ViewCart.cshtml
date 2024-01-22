@@ -1,0 +1,67 @@
+﻿@model IEnumerable<EComm_Web_App.Models.ShoppingCartModel>
+
+@{
+    ViewData["Title"] = "ViewCart";
+}
+
+<h2>ViewCart</h2>
+@if(@ViewBag.isCartEmpty){
+<div asp-validation-summary="All" class="text-danger h3"></div>
+}
+else{
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductQty)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) 
+{
+            @if (User.Identity.Name.Equals(item.UserName))
+            {
+                <tr>
+                    
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductQty)
+            </td>
+            <td>
+                  <td class="text-center">
+                      <a asp-action="DeleteCart" class="btn btn-outline-danger" asp-route-Id ="@item.ShoppingCartId">Delete item</a>
+                  </td>
+                  <td class="text-center">
+                      <a asp-action="RemoveCart" class="btn btn-outline-danger" asp-route-Id ="@item.ShoppingCartId">Remove item</a>
+                  </td>
+               
+
+            </td>
+        </tr>
+        
+        }
+}
+        @*<tr>
+            <td align="right">
+                      
+             </td>
+        </tr>*@
+    </tbody>
+</table>
+<div class="text-right">
+    <a asp-action="Checkout" class="btn btn-outline-danger"> Check out</a>
+</div>
+}

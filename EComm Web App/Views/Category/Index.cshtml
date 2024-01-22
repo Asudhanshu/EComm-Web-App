@@ -1,0 +1,123 @@
+﻿@model IEnumerable<EComm_Web_App.Models.CategoryModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Pager pager = new Pager();
+    int pageNo = 0;
+    if(ViewBag.Pager != null)
+    {
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+    }
+}
+
+
+<body>
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table id="table_id" class="display">
+    <thead>
+        <tr>
+           
+            <th>CategoryName</th>
+            <th>CategoryDescription</th> 
+            <th>Edit</th>
+            <th>Details</th>
+
+            <th>Delete</th>
+
+            
+        </tr>
+    </thead>
+
+
+ <tbody>
+@foreach (var item in Model) {
+        <tr>
+          
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryDescription)
+            </td>
+            
+
+        
+                <td class="text-center">
+                                <a asp-action="Edit" class="btn btn-outline-primary"  asp-route-Id ="@item.CategoryId">Edit</a>
+                 </td>
+                 <td class="text-center">
+                                <a asp-action="Details" class="btn btn-outline-info"  asp-route-Id="@item.CategoryId">Details</a>
+                 </td>
+                 <td class="text-center">
+                                <a asp-action="Delete" class="btn btn-outline-danger" asp-route-Id ="@item.CategoryId">Delete</a>
+                 </td>
+            
+
+        </tr>
+}
+   </tbody>
+</table>
+
+
+
+ @*<div class="container">
+    @if(pager.TotalPages > 0)
+    {
+        <ul class = "pagination justify-content-end">
+
+            @if (pager.CurrentPage > 1)
+            {
+                 <li class="page-item">
+                    <a class="page-link" asp-controller="Category" asp-action="Index" asp-route-pg="1">First</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" asp-controller="Category" asp-action="Index" asp-route-pg="@(pager.CurrentPage-1)">Previous</a>
+                </li>
+            }
+
+            @for(var pge = pager.StartPage; pge <= pager.EndPage; pge++)
+            {
+                <li class="page-item @(pge==pager.CurrentPage? "active":"")">
+                    <a class="page-link" asp-controller="Category" asp-action="Index" asp-route-pg="@pge">@pge</a>
+                </li>
+            }
+            @if (pager.CurrentPage < pager.TotalPages)
+            {
+                <li class="page-item">
+                    <a class="page-link" asp-controller="Category" asp-action="Index" asp-route-pg="@(pager.CurrentPage+1)">Next</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" asp-controller="Category" asp-action="Index" asp-route-pg="@(pager.TotalPages)">Last</a>
+                </li>
+            }
+        </ul>
+        }
+    
+</div>*@
+</body>
+
+@section scripts{
+
+ <script type="text/javascript">
+    $(document).ready( function () {
+    $('#table_id').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    });
+
+} );
+
+</script>
+}

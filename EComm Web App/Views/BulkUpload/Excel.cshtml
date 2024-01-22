@@ -1,0 +1,90 @@
+﻿@model IEnumerable<ProductModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+   /* body{
+        background: #eb4559;
+    }*/
+    body{
+        font-family: sans-serif;
+    }
+    .container{
+        top: 30%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        position:absolute;
+    }
+    .upload-box{
+        font-size:16px;
+        background:white;
+        border-radius:50px;
+        box-shadow:5px 5px 10px black;
+        width:350px;
+        outline:none;
+
+    }
+    ::-webkit-file-upload-button{
+        color:white;
+        background:#206a5d;
+        padding:20px;
+        border:none;
+        border-radius:50px;
+        box-shadow:1px 0 1px 1px #6b4559;
+        outline:none;
+    }
+    ::-webkit-file-upload-button:hover{
+        background:#438a5e;
+    }
+    table{
+        top:70%;
+        left:50%;
+        width: 50%;
+        height:10%;
+        border-collapse:collapse;
+        background:black;
+        color:white;
+    }
+    td{
+        text-align:center;
+    }
+</style>
+
+
+
+<body>
+    <div class="container">
+<form asp-controller="BulkUpload" asp-action="Excel" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" class="upload-box"/>
+    <button class="btn btn-outline-primary" type="submit">Upload</button>
+    <hr />
+</form>
+
+
+@if(Model.Count()>0)
+{
+    <hr />
+    <table border="1">
+        <tr>
+            <th class="text-center">Name</th>
+            <th class="text-center">Brand</th>
+            <th class="text-center">Description</th>
+            <th class="text-center">Price</th>
+            <th class="text-center">Quantity</th>
+        </tr> 
+        @foreach(ProductModel product in Model)
+        {
+            <tr>
+            <td>@product.ProductName</td>
+            <td>@product.ProductBrand</td>
+            <td>@product.ProductDescription</td>
+            <td>@product.ProductPrice</td>
+            <td>@product.ProductQty</td>
+        </tr>
+        }
+    </table>
+}
+
+</div>
+</body>

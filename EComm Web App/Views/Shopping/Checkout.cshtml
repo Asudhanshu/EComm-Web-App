@@ -1,0 +1,59 @@
+﻿@model IEnumerable<EComm_Web_App.Models.CheckoutModel>
+
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+<h2>Checkout</h2>
+@if (!ViewBag.isProductAvailable)
+{
+    <div asp-validation-summary="All" class="text-danger h3"></div>
+    <h1>Your order can not be Completed</h1>
+    <p>Available stock is not enough for @ViewBag.productsName, Available Quantity is @ViewBag.ProductQuantity and Required Quantity is @ViewBag.AskedQuantity</p>
+}
+else{
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalPrice)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductQty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalPrice)
+            </td>
+        </tr>
+}
+<tr>
+    <td>
+        <h4>The Final Bill is @ViewBag.FinalPrice</h4>
+        <a asp-controller=Shopping asp-action="OrderItem" class="btn btn-outline-danger float-right"> Order</a>
+    </td>
+</tr>
+    </tbody>
+</table>
+
+}

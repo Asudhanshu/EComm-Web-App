@@ -1,0 +1,185 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<EComm_Web_App.Models.ProductModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Pager pager = new Pager();
+    int pageNo = 0;
+    if(ViewBag.Pager != null)
+    {
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+    }
+}
+
+
+
+<h1>SHAPT</h1>
+
+<form asp-controller="Products" asp-action="Search">
+    <p style="text-align:right;margin-right:20px;" class="btn btn-outline-primary">
+        Title: <input type="text" name="SearchString" />
+        <input type="submit" value="Search" />
+    </p>
+</form>
+@if(User.IsInRole("Admin"))
+{
+    <p style="text-align:right;margin-right:20px;">
+        <a class="btn btn-outline-primary" asp-action="Create">Create New</a>
+    </p>
+}
+@if(!User.IsInRole("Admin"))
+{
+<p style="text-align:right;margin-right:20px;">
+        <a class="btn btn-outline-primary"  asp-controller="Shopping" asp-action="ViewCart">view Cart</a>
+    </p>
+}
+<table id="table_id" class="display">
+    <thead>
+        <tr>
+           @if(!User.IsInRole("Admin"))
+            {
+            <th>ProductName</th>
+            <th>ProductBrand</th>  
+            <th>ProductDescription</th>
+            <th>ProductPrice</th>
+            <th>Image</th>
+            
+            <th>Details</th>
+                <th>Add to cart</th>
+            }
+            else
+            {
+                <th>ProductName</th>
+            <th>ProductBrand</th>  
+            <th>ProductDescription</th>
+            <th>ProductPrice</th>
+            <th>Image</th>
+            
+            <th>Edit</th>
+                <th>Details</th>
+                <th>Delete</th>
+            }
+
+        </tr>
+    </thead>
+
+
+<tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductBrand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductPrice)
+                </td>
+                <td>
+                <img src="@(item.Image)" asp-append-version="true" width="100px" height="100px"/>
+                </td>
+               
+
+               
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <td class="text-center">
+                                <a asp-action="Edit" class="btn btn-outline-primary"  asp-route-Id ="@item.ProductId">
+                                    <i class="fa-solid fa-pen-to-square"></i>Edit</a>
+                            </td>
+                            <td class="text-center">
+                                <a asp-action="Details" class="btn btn-outline-info"  asp-route-Id="@item.ProductId">
+                                    <i class="fa-solid fa-square-info"></i>Details</a>
+                            </td>
+                            <td class="text-center">
+                                <a asp-action="Delete" class="btn btn-outline-danger" asp-route-Id ="@item.ProductId">
+                                    <i class="fa-solid fa-trash-arrow-up"></i>Delete</a>
+                            </td>
+                            
+                        }
+                        else
+                        {
+                            <td class="text-center">
+                                <a asp-action="Details" class="btn btn-outline-info" asp-route-Id="@item.ProductId">
+                                     <i class="fa-solid fa-square-info"></i>Details</a>
+                    </td>
+                    if (item.ProductQty > 0)
+                    {
+                        <td class="text-center">
+                            <a asp-controller="Shopping" asp-action="AddToCart" class="btn btn-outline-danger" asp-route-Id ="@item.ProductId">
+                                <i class="fa-solid fa-cart-arrow-down"></i>Add to Cart</a>
+                        </td>
+                    }
+                    else
+                    {
+                        <td class="text-center">
+                            <p>out of stock!!!</p>
+                        </td>
+                    }
+                }
+            </tr>
+            }
+        </tbody>
+    </table>
+
+@section scripts{
+
+ <script type="text/javascript">
+    $(document).ready( function () {
+    $('#table_id').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    });
+
+} );
+
+   </script>
+}
+
+
+    
+    <div class="container">
+    @if(pager.TotalPages > 0)
+    {
+        <ul class = "pagination justify-content-end">
+
+            @if (pager.CurrentPage > 1)
+            {
+                 <li class="page-item">
+                    <a class="page-link" asp-controller="Products" asp-action="Index" asp-route-pg="1">First</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" asp-controller="Products" asp-action="Index" asp-route-pg="@(pager.CurrentPage-1)">Previous</a>
+                </li>
+            }
+
+            @for(var pge = pager.StartPage; pge <= pager.EndPage; pge++)
+            {
+                <li class="page-item @(pge==pager.CurrentPage? "active":"")">
+                    <a class="page-link" asp-controller="Products" asp-action="Index" asp-route-pg="@pge">@pge</a>
+                </li>
+            }
+            @if (pager.CurrentPage < pager.TotalPages)
+            {
+                <li class="page-item">
+                    <a class="page-link" asp-controller="Products" asp-action="Index" asp-route-pg="@(pager.CurrentPage+1)">Next</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" asp-controller="Products" asp-action="Index" asp-route-pg="@(pager.TotalPages)">Last</a>
+                </li>
+            }
+        </ul>
+        }
+    
+</div>

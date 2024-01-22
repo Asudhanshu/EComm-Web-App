@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32414.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EComm Web App", "EComm Web App\EComm Web App.csproj", "{147DD922-BF83-4ECE-BD1C-23C6F18F2EFE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{755E143A-E37B-4388-A794-15C6E84F5920}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommRepo", "ECommRepo\ECommRepo.csproj", "{A754068E-B230-46DE-A656-277083827765}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommAPI", "ECommAPI\ECommAPI.csproj", "{52C5AC16-FECB-4116-937B-2888CAB7D212}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Observer", "Observer\Observer.csproj", "{BF6AAFAB-9793-458E-8EA9-50B5CD82B80E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommRepoTest", "ECommRepoTest\ECommRepoTest.csproj", "{85882D55-CA09-4F87-A7DC-D8656DDA7166}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAuthLayerAPI", "DataAuthLayerAPI\DataAuthLayerAPI.csproj", "{924CCD78-1D01-45BD-8FF6-DFE793465C4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{147DD922-BF83-4ECE-BD1C-23C6F18F2EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{147DD922-BF83-4ECE-BD1C-23C6F18F2EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{147DD922-BF83-4ECE-BD1C-23C6F18F2EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{147DD922-BF83-4ECE-BD1C-23C6F18F2EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{755E143A-E37B-4388-A794-15C6E84F5920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{755E143A-E37B-4388-A794-15C6E84F5920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{755E143A-E37B-4388-A794-15C6E84F5920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{755E143A-E37B-4388-A794-15C6E84F5920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A754068E-B230-46DE-A656-277083827765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A754068E-B230-46DE-A656-277083827765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A754068E-B230-46DE-A656-277083827765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A754068E-B230-46DE-A656-277083827765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52C5AC16-FECB-4116-937B-2888CAB7D212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52C5AC16-FECB-4116-937B-2888CAB7D212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52C5AC16-FECB-4116-937B-2888CAB7D212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52C5AC16-FECB-4116-937B-2888CAB7D212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF6AAFAB-9793-458E-8EA9-50B5CD82B80E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF6AAFAB-9793-458E-8EA9-50B5CD82B80E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF6AAFAB-9793-458E-8EA9-50B5CD82B80E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF6AAFAB-9793-458E-8EA9-50B5CD82B80E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85882D55-CA09-4F87-A7DC-D8656DDA7166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85882D55-CA09-4F87-A7DC-D8656DDA7166}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85882D55-CA09-4F87-A7DC-D8656DDA7166}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85882D55-CA09-4F87-A7DC-D8656DDA7166}.Release|Any CPU.Build.0 = Release|Any CPU
+		{924CCD78-1D01-45BD-8FF6-DFE793465C4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{924CCD78-1D01-45BD-8FF6-DFE793465C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{924CCD78-1D01-45BD-8FF6-DFE793465C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{924CCD78-1D01-45BD-8FF6-DFE793465C4E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {874E174D-7860-469D-9501-C323800187D8}
+	EndGlobalSection
+EndGlobal

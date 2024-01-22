@@ -1,0 +1,116 @@
+﻿@model EComm_Web_App.Models.SignUp
+
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+@*<h1 class="text-center">Registration </h1>
+<hr />
+<div class="row justify-content-center">
+    <div class="col-6 justify-content-center">
+         <div class="card">
+               <div class="card-header text-center">
+                   <div>
+                        <img width="150px " src="~/Images/sign.jpg" />
+                    </div>
+            </div>
+            <div class="card-body text-center">
+                <form asp-action="RegisterUser">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                         <label class="control-label text-danger">*</label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                         <label class="control-label text-danger">*</label>
+                        <input asp-for="Password" type="password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ConfirmPassword" class="control-label"></label>
+                         <label class="control-label text-danger">*</label>
+                        <input asp-for="ConfirmPassword" type="password" class="form-control" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Role" class="control-label"></label>
+                        <select asp-for="RoleName" class="form-control">
+                        <option value="Admin">Admin</option>
+                        <option value="Users">Users</option>
+                        </select>
+                        <span asp-validation-for="Role" class="text-danger"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="~/css2/StyleSheet.css">
+    </head>
+
+ <body>
+        <section>
+            <div class="form-container">
+                <h1>Registration</h1>
+                <form asp-action="RegisterUser">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="control">
+
+                        <label asp-for="Email"></label>
+                        <input type="text" asp-for="Email" id="name" placeholder="Enter Email" required/>
+                        <span asp-validation-for="Email" ></span>
+                    </div>
+
+                       <div class="control">
+                        <label asp-for="Password"></label>
+                        <input asp-for="Password" type="password" placeholder="Enter Password" required>
+                        <span asp-validation-for="Password"></span>
+                    </div>
+
+                     <div class="control">
+                        <label asp-for="ConfirmPassword"></label>
+                        
+                        <input asp-for="ConfirmPassword" type="password" placeholder="Re-enter Password" required>
+                        <span asp-validation-for="ConfirmPassword"></span>
+                    </div>
+                     <div class="control">
+                        <label asp-for="Role"></label>
+                        <select asp-for="RoleName">
+                        <option value="Admin">Admin</option>
+                        <option value="Users">Users</option>
+                        </select>
+                        <span asp-validation-for="Role" class="text-danger"></span>
+                    </div>
+
+                    <div class="control">
+                        <input type="submit" value="Create">
+                    </div>
+                </form>
+
+
+            </div>
+        </section>
+    </body>
+
+<div>
+    <a asp-action="Login">Back to Login</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

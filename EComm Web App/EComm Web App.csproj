@@ -1,0 +1,340 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>EComm_Web_App</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="obj\**" />
+    <Content Remove="obj\**" />
+    <EmbeddedResource Remove="obj\**" />
+    <None Remove="obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Helper\IAPIUrl.cs" />
+    <Compile Remove="Helper\ProductAPIUrl.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Products\DeleteCart.cshtml" />
+    <Content Remove="wwwroot\images\1.png" />
+    <Content Remove="wwwroot\images\2.png" />
+    <Content Remove="wwwroot\images\ab_pic.jpg" />
+    <Content Remove="wwwroot\images\arrow.png" />
+    <Content Remove="wwwroot\images\b1.jpg" />
+    <Content Remove="wwwroot\images\b2.jpg" />
+    <Content Remove="wwwroot\images\b3.jpg" />
+    <Content Remove="wwwroot\images\b4.jpg" />
+    <Content Remove="wwwroot\images\b5.jpg" />
+    <Content Remove="wwwroot\images\b6.jpg" />
+    <Content Remove="wwwroot\images\b7.jpg" />
+    <Content Remove="wwwroot\images\b8.jpg" />
+    <Content Remove="wwwroot\images\banner1.jpg" />
+    <Content Remove="wwwroot\images\banner2.jpg" />
+    <Content Remove="wwwroot\images\banner3.jpg" />
+    <Content Remove="wwwroot\images\banner4.jpg" />
+    <Content Remove="wwwroot\images\banner5.jpg" />
+    <Content Remove="wwwroot\images\bb1.jpg" />
+    <Content Remove="wwwroot\images\bb2.jpg" />
+    <Content Remove="wwwroot\images\bottom1.jpg" />
+    <Content Remove="wwwroot\images\bottom2.jpg" />
+    <Content Remove="wwwroot\images\bottom3.jpg" />
+    <Content Remove="wwwroot\images\bottom4.jpg" />
+    <Content Remove="wwwroot\images\bot_1.jpg" />
+    <Content Remove="wwwroot\images\bot_2.jpg" />
+    <Content Remove="wwwroot\images\btn_next.png" />
+    <Content Remove="wwwroot\images\btn_pause.png" />
+    <Content Remove="wwwroot\images\btn_play.png" />
+    <Content Remove="wwwroot\images\btn_prev.png" />
+    <Content Remove="wwwroot\images\close_1.png" />
+    <Content Remove="wwwroot\images\d1.jpg" />
+    <Content Remove="wwwroot\images\d2.jpg" />
+    <Content Remove="wwwroot\images\d3.jpg" />
+    <Content Remove="wwwroot\images\inner1.jpg" />
+    <Content Remove="wwwroot\images\inner2.jpg" />
+    <Content Remove="wwwroot\images\log_pic.jpg" />
+    <Content Remove="wwwroot\images\m1.jpg" />
+    <Content Remove="wwwroot\images\m2.jpg" />
+    <Content Remove="wwwroot\images\m3.jpg" />
+    <Content Remove="wwwroot\images\m4.jpg" />
+    <Content Remove="wwwroot\images\m5.jpg" />
+    <Content Remove="wwwroot\images\m6.jpg" />
+    <Content Remove="wwwroot\images\m7.jpg" />
+    <Content Remove="wwwroot\images\m8.jpg" />
+    <Content Remove="wwwroot\images\mark1.png" />
+    <Content Remove="wwwroot\images\mid.jpg" />
+    <Content Remove="wwwroot\images\s1.jpg" />
+    <Content Remove="wwwroot\images\s2.jpg" />
+    <Content Remove="wwwroot\images\s3.jpg" />
+    <Content Remove="wwwroot\images\s4.jpg" />
+    <Content Remove="wwwroot\images\s5.jpg" />
+    <Content Remove="wwwroot\images\s6.jpg" />
+    <Content Remove="wwwroot\images\s7.jpg" />
+    <Content Remove="wwwroot\images\s8.jpeg" />
+    <Content Remove="wwwroot\images\s8.jpg" />
+    <Content Remove="wwwroot\images\search.png" />
+    <Content Remove="wwwroot\images\t1.jpg" />
+    <Content Remove="wwwroot\images\t2.jpg" />
+    <Content Remove="wwwroot\images\t3.jpg" />
+    <Content Remove="wwwroot\images\t4.jpg" />
+    <Content Remove="wwwroot\images\tick-mark1.png" />
+    <Content Remove="wwwroot\images\top1.jpg" />
+    <Content Remove="wwwroot\images\top2.jpg" />
+    <Content Remove="wwwroot\images\up_arrow.png" />
+    <Content Remove="wwwroot\images\w1.jpg" />
+    <Content Remove="wwwroot\images\w2.jpg" />
+    <Content Remove="wwwroot\images\w3.jpg" />
+    <Content Remove="wwwroot\images\w4.jpg" />
+    <Content Remove="wwwroot\images\w5.jpg" />
+    <Content Remove="wwwroot\images\w6.jpg" />
+    <Content Remove="wwwroot\images\w7.jpg" />
+    <Content Remove="wwwroot\images\w8.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\net5.0\appsettings.Development.json" />
+    <Content Include="bin\Debug\net5.0\appsettings.json" />
+    <Content Include="bin\Debug\net5.0\EComm Web App.deps.json" />
+    <Content Include="bin\Debug\net5.0\EComm Web App.runtimeconfig.dev.json" />
+    <Content Include="bin\Debug\net5.0\EComm Web App.runtimeconfig.json" />
+    <Content Include="bin\Debug\net5.0\ECommAPI.deps.json" />
+    <Content Include="bin\Debug\net5.0\ECommAPI.runtimeconfig.dev.json" />
+    <Content Include="bin\Debug\net5.0\ECommAPI.runtimeconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll" />
+    <None Include="bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.resources.dll" />
+    <None Include="bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\DataAccessLayer.dll" />
+    <None Include="bin\Debug\net5.0\DataAccessLayer.pdb" />
+    <None Include="bin\Debug\net5.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll" />
+    <None Include="bin\Debug\net5.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\de\Microsoft.CodeAnalysis.resources.dll" />
+    <None Include="bin\Debug\net5.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\dotnet-aspnet-codegenerator-design.dll" />
+    <None Include="bin\Debug\net5.0\EComm Web App.dll" />
+    <None Include="bin\Debug\net5.0\EComm Web App.exe" />
+    <None Include="bin\Debug\net5.0\EComm Web App.pdb" />
+    <None Include="bin\Debug\net5.0\EComm Web App.Views.dll" />
+    <None Include="bin\Debug\net5.0\EComm Web App.Views.pdb" />
+    <None Include="bin\Debug\net5.0\ECommAPI.dll" />
+    <None Include="bin\Debug\net5.0\ECommAPI.exe" />
+    <None Include="bin\Debug\net5.0\ECommAPI.pdb" />
+    <None Include="bin\Debug\net5.0\ECommAPI.Views.dll" />
+    <None Include="bin\Debug\net5.0\ECommAPI.Views.pdb" />
+    <None Include="bin\Debug\net5.0\ECommRepo.dll" />
+    <None Include="bin\Debug\net5.0\ECommRepo.pdb" />
+    <None Include="bin\Debug\net5.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll" />
+    <None Include="bin\Debug\net5.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\es\Microsoft.CodeAnalysis.resources.dll" />
+    <None Include="bin\Debug\net5.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll" />
+    <None Include="bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.resources.dll" />
+    <None Include="bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\Humanizer.dll" />
+    <None Include="bin\Debug\net5.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll" />
+    <None Include="bin\Debug\net5.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\it\Microsoft.CodeAnalysis.resources.dll" />
+    <None Include="bin\Debug\net5.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll" />
+    <None Include="bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.resources.dll" />
+    <None Include="bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll" />
+    <None Include="bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.resources.dll" />
+    <None Include="bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.CodeAnalysis.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.CodeAnalysis.Razor.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.CodeAnalysis.Workspaces.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.Identity.Client.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.OpenApi.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll" />
+    <None Include="bin\Debug\net5.0\Newtonsoft.Json.dll" />
+    <None Include="bin\Debug\net5.0\Observer.dll" />
+    <None Include="bin\Debug\net5.0\Observer.pdb" />
+    <None Include="bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll" />
+    <None Include="bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.resources.dll" />
+    <None Include="bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll" />
+    <None Include="bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.resources.dll" />
+    <None Include="bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe" />
+    <None Include="bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb" />
+    <None Include="bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe" />
+    <None Include="bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb" />
+    <None Include="bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb" />
+    <None Include="bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb" />
+    <None Include="bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll" />
+    <None Include="bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll" />
+    <None Include="bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll" />
+    <None Include="bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.resources.dll" />
+    <None Include="bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll" />
+    <None Include="bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll" />
+    <None Include="bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll" />
+    <None Include="bin\Debug\net5.0\System.Composition.AttributedModel.dll" />
+    <None Include="bin\Debug\net5.0\System.Composition.Convention.dll" />
+    <None Include="bin\Debug\net5.0\System.Composition.Hosting.dll" />
+    <None Include="bin\Debug\net5.0\System.Composition.Runtime.dll" />
+    <None Include="bin\Debug\net5.0\System.Composition.TypedParts.dll" />
+    <None Include="bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll" />
+    <None Include="bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll" />
+    <None Include="bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll" />
+    <None Include="bin\Debug\net5.0\System.Runtime.Caching.dll" />
+    <None Include="bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll" />
+    <None Include="bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll" />
+    <None Include="bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.resources.dll" />
+    <None Include="bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll" />
+    <None Include="bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll" />
+    <None Include="bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll" />
+    <None Include="bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" />
+    <None Include="bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll" />
+    <None Include="bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll" />
+    <None Include="wwwroot\fonts1\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\images\1.png" />
+    <None Include="wwwroot\images\2.png" />
+    <None Include="wwwroot\images\ab_pic.jpg" />
+    <None Include="wwwroot\images\arrow.png" />
+    <None Include="wwwroot\images\b1.jpg" />
+    <None Include="wwwroot\images\b2.jpg" />
+    <None Include="wwwroot\images\b3.jpg" />
+    <None Include="wwwroot\images\b4.jpg" />
+    <None Include="wwwroot\images\b5.jpg" />
+    <None Include="wwwroot\images\b6.jpg" />
+    <None Include="wwwroot\images\b7.jpg" />
+    <None Include="wwwroot\images\b8.jpg" />
+    <None Include="wwwroot\images\banner1.jpg" />
+    <None Include="wwwroot\images\banner2.jpg" />
+    <None Include="wwwroot\images\banner3.jpg" />
+    <None Include="wwwroot\images\banner4.jpg" />
+    <None Include="wwwroot\images\banner5.jpg" />
+    <None Include="wwwroot\images\bb1.jpg" />
+    <None Include="wwwroot\images\bb2.jpg" />
+    <None Include="wwwroot\images\bottom1.jpg" />
+    <None Include="wwwroot\images\bottom2.jpg" />
+    <None Include="wwwroot\images\bottom3.jpg" />
+    <None Include="wwwroot\images\bottom4.jpg" />
+    <None Include="wwwroot\images\bot_1.jpg" />
+    <None Include="wwwroot\images\bot_2.jpg" />
+    <None Include="wwwroot\images\btn_next.png" />
+    <None Include="wwwroot\images\btn_pause.png" />
+    <None Include="wwwroot\images\btn_play.png" />
+    <None Include="wwwroot\images\btn_prev.png" />
+    <None Include="wwwroot\images\close_1.png" />
+    <None Include="wwwroot\images\d1.jpg" />
+    <None Include="wwwroot\images\d2.jpg" />
+    <None Include="wwwroot\images\d3.jpg" />
+    <None Include="wwwroot\images\inner1.jpg" />
+    <None Include="wwwroot\images\inner2.jpg" />
+    <None Include="wwwroot\images\log_pic.jpg" />
+    <None Include="wwwroot\images\m1.jpg" />
+    <None Include="wwwroot\images\m2.jpg" />
+    <None Include="wwwroot\images\m3.jpg" />
+    <None Include="wwwroot\images\m4.jpg" />
+    <None Include="wwwroot\images\m5.jpg" />
+    <None Include="wwwroot\images\m6.jpg" />
+    <None Include="wwwroot\images\m7.jpg" />
+    <None Include="wwwroot\images\m8.jpg" />
+    <None Include="wwwroot\images\mark1.png" />
+    <None Include="wwwroot\images\mid.jpg" />
+    <None Include="wwwroot\images\s1.jpg" />
+    <None Include="wwwroot\images\s2.jpg" />
+    <None Include="wwwroot\images\s3.jpg" />
+    <None Include="wwwroot\images\s4.jpg" />
+    <None Include="wwwroot\images\s5.jpg" />
+    <None Include="wwwroot\images\s6.jpg" />
+    <None Include="wwwroot\images\s7.jpg" />
+    <None Include="wwwroot\images\s8.jpeg" />
+    <None Include="wwwroot\images\s8.jpg" />
+    <None Include="wwwroot\images\search.png" />
+    <None Include="wwwroot\images\t1.jpg" />
+    <None Include="wwwroot\images\t2.jpg" />
+    <None Include="wwwroot\images\t3.jpg" />
+    <None Include="wwwroot\images\t4.jpg" />
+    <None Include="wwwroot\images\tick-mark1.png" />
+    <None Include="wwwroot\images\top1.jpg" />
+    <None Include="wwwroot\images\top2.jpg" />
+    <None Include="wwwroot\images\up_arrow.png" />
+    <None Include="wwwroot\images\w1.jpg" />
+    <None Include="wwwroot\images\w2.jpg" />
+    <None Include="wwwroot\images\w3.jpg" />
+    <None Include="wwwroot\images\w4.jpg" />
+    <None Include="wwwroot\images\w5.jpg" />
+    <None Include="wwwroot\images\w6.jpg" />
+    <None Include="wwwroot\images\w7.jpg" />
+    <None Include="wwwroot\images\w8.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ExcelDataReader" Version="3.6.0" />
+    <PackageReference Include="log4net" Version="2.0.14" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="6.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\files\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataAuthLayerAPI\DataAuthLayerAPI.csproj" />
+  </ItemGroup>
+
+</Project>

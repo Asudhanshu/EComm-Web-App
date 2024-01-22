@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Observer\**" />
+    <EmbeddedResource Remove="Observer\**" />
+    <None Remove="Observer\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ECommRepo\ECommRepo.csproj" />
+  </ItemGroup>
+
+</Project>

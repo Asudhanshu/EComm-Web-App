@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<EComm_Web_App.Models.ProductModel>
+
+@{
+    ViewData["Title"] = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h1>Products List</h1>
+<h2>Your Search Result</h2>
+
+
+@if(!@ViewBag.isProductFound){
+<div asp-validation-summary="All" class="text-danger h1"></div>
+}
+
+else{
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Title
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductQty)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductBrand)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductDescription)
+                </th>
+                
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductQty)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductBrand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductDescription)
+                </td>
+              
+                <td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    </div>
+    }
